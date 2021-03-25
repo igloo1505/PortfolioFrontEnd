@@ -409,6 +409,11 @@ section {
 @media only screen and (min-width: 1050px) {
   .hero {
     height: 90vh; }
+  .hero .heroText h1 {
+  width: 70%;
+  /* line-height: normal; */
+  /* line-height: 3.4rem; */
+  }
   .nav-container {
     display: grid;
     grid-template-columns: 66% auto;
@@ -448,7 +453,8 @@ section {
     text-align: left; }
   .hero .content h1 {
     font-size: 3rem;
-    line-height: 3.4rem; }
+    /* line-height: 3.4rem;  */
+  }
   .hero .prompt {
     margin-left: calc((66vw - 200px) / 4);
     width: 100%;
@@ -498,6 +504,10 @@ section {
 @media only screen and (min-width: 1550px) {
   header {
     padding: 2rem 2rem 2rem 20rem; }
+  .hero .heroText h1 {
+    width: auto;
+    /* line-height: 3.4rem; */
+    }
   .socialHeader {
     padding: 2rem 20rem 2rem 0; }
   section {
