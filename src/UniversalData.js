@@ -95,11 +95,12 @@ export const portfolioArray = [
     subTitle: "Javascript Trivia",
     description:
       "Trivia game for entry level developers, built with and based on Javascript, DBMS's and general development knowledge. A few questions in the default database are relevant, most are just interesting.",
+    isLast: false,
   },
   {
     index: 1,
-    transitionIndex: 4,
-    orientation: "left",
+    transitionIndex: 5,
+    orientation: "right",
     imageName: "jeopardyScreenShot",
     url: "https://igloo-jeopardy.herokuapp.com/login",
     repo: "https://github.com/igloo1505/GenericJeopardy/tree/master",
@@ -107,6 +108,7 @@ export const portfolioArray = [
     subTitle: "React based trivia game",
     description:
       "A simple Jeopardy game built with React, Node and Express using the Context API. A version of this attached to a different database was originally built for a therapist working with disabled adults.",
+    isLast: true,
   },
 ];
 
