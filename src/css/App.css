@@ -41,13 +41,16 @@ a {
   text-decoration: none; }
 
 img {
-  width: 100%; }
+  width: 100%; 
+}
 
 .nav-container {
   background: #0080F0; }
 
 .nav-container a {
-  color: #fff; }
+  color: #fff;
+  height: 100%;
+}
 
 /* .slideOutDiv {
   display: flex;
@@ -142,7 +145,8 @@ header nav {
 
 header nav ul {
   display: flex;
-  height: 100%; }
+  /* height: 100%;  */
+}
 
 header nav ul .inlineNavLinks {
   display: none; }
@@ -317,20 +321,24 @@ section {
   /* .portfolio-container a {
     display: contents;
   } */
+.portfolio-container {
+  padding-bottom: 40px;
+}
 
 .portfolio-container a img {
   border-radius: 1rem;
   margin-bottom: 2rem; 
   max-height: 300px;
-  width: auto;
+  width: 100%;
+  object-fit: contain;
 }
-
 .portfolio-link-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 60%;
     margin-left: 20%;
+    padding-bottom: 30px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -356,7 +364,9 @@ section {
       display: contents;
     }
   header nav ul {
-    display: flex; }
+    display: flex; 
+    height: 100%;
+  }
   header nav ul .inlineNavLinks {
     display: block; }
   .burgerButton {
@@ -377,11 +387,18 @@ section {
     grid-gap: 1rem; }
   .portfolio {
     padding-top: 7rem; }
+    .portfolio-container a img {
+      border-radius: 1rem;
+      margin-bottom: 2rem; 
+      max-height: 300px;
+      width: auto;
+    }
   .portfolio-container img {
     margin-left: 2rem; } 
   .portfolio-link-container {
     display: flex;
     flex-direction: row;
+    margin-left: 0;
     /* justify-content: space-around; */
   }
   .portfolio-link-container .repo-link {
@@ -443,7 +460,16 @@ section {
     transform: translateX(-50%); }
   .portfolio img {
     float: right;
-    max-width: 500px; } }
+    max-width: 500px; } 
+    header nav ul li a {
+      padding: 0 1rem;
+    }
+    header nav ul {
+      display: flex;
+      height: 100%;
+      /* font-size: 12px; */
+    }
+  }
 
 @media only screen and (min-width: 1250px) {
   .logoFont {
@@ -461,7 +487,13 @@ section {
   section {
     padding: 10rem 10rem 4rem 10rem; }
   .hero .content {
-    padding: 6rem 8rem 6rem 10rem; } }
+    padding: 6rem 8rem 6rem 10rem; } 
+    header nav ul {
+      display: flex;
+      height: 100%; 
+      font-size: 1rem;
+    }
+    }
 
 @media only screen and (min-width: 1550px) {
   header {
@@ -477,4 +509,8 @@ section {
   .skills-container ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem; } }
+    grid-gap: 1rem; }
+    header nav ul li a {
+      padding: 0 2rem;
+    }
+  }
