@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://igloo1505.github.io/PortfolioFrontEnd",
+  "homepage": "https://igloo1505.github.io/PortfolioFrontEnd/",
   "dependencies": {
     "@animated-burgers/burger-squeeze": "^1.1.2",
     "@duik/it": "^0.6.0",

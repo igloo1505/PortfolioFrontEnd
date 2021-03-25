@@ -28,7 +28,9 @@ button:focus, button:active {
   font-style: normal; }
 
 .App {
-  width: 100vw; }
+  width: 100vw; 
+  overflow: hidden;
+}
 
 ul {
   list-style-type: none;
@@ -47,7 +49,7 @@ img {
 .nav-container a {
   color: #fff; }
 
-.slideOutDiv {
+/* .slideOutDiv {
   display: flex;
   position: absolute;
   height: 100vh;
@@ -55,7 +57,50 @@ img {
   top: 0;
   background: white;
   z-index: 100;
-  margin-left: calc(100vw); }
+  margin-left: calc(100vw); } */
+  .slideOutDiv {
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 230px;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+    right: 0;
+    transition: width .5s linear;
+  }
+  .slideOutDiv ul {
+    width: 100%;
+    margin-top: 100px;
+    width: 230px;
+    min-width: 230px;
+  }
+  .slideOutDiv ul li {
+    padding: 15px;
+    width: 100%;
+    display: block;
+    border: 2px solid #f7f7f7;
+  }
+  /* .slideOutDivHidden ul {
+    width: 100%;
+    margin-top: 100px;
+    width: 230px;
+    min-width: 230px;
+  } */
+  .slideOutDivHidden {
+      display: flex;
+      position: absolute;
+      height: 100vh;
+      width: 0;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+      right: 0;
+      transition: width .5s linear;
+  }
+  .slideOutDivHidden ul {
+    display: none;
+  }
 
 .slideOutDiv ul {
   width: 100%;
@@ -144,8 +189,11 @@ header nav .burgerButtonLi {
 
 .hero .heroText h1 {
   width: auto;
-  margin-left: 50%;
-  transform: translateX(-50%); }
+  line-height: normal;
+  /* margin-left: 50%;
+  transform: translateX(-50%);  */
+
+}
 
 .prompt {
   display: flex;
