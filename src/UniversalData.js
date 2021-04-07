@@ -43,7 +43,9 @@ export const featuredTitleText = () => {
         a moderate level of experience looking to keep track of certain
         exercises without the need of complicated workout planning.
       </p>
-      <p style={{ color: AppColors.navBarColor }}>Publication in Progress</p>
+      <p style={{ color: AppColors.navBarColor, paddingBottom: "10px" }}>
+        Publication in Progress
+      </p>
     </>
   );
 };

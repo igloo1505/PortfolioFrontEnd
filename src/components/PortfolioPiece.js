@@ -9,7 +9,9 @@ const PortfolioPiece = ({ p }) => {
   const imageArray = [triviaScreenShot, jeopardyScreenShot];
   if (p.orientation === "left") {
     return (
-      <div className={`portfolio-container transitionLeft${p.transitionIndex}`}>
+      <div
+        className={`portfolio-container portfolio-container-${p.orientation} transitionLeft${p.transitionIndex}`}
+      >
         <div className={`portfolio-${p.orientation}-${p.transitionIndex}`}>
           <div className="inner">
             <p
@@ -58,7 +60,7 @@ const PortfolioPiece = ({ p }) => {
   } else if (p.orientation === "right") {
     return (
       <div
-        className={`portfolio-container transitionLeft${p.transitionIndex}`}
+        className={`portfolio-container portfolio-container-${p.orientation} transitionLeft${p.transitionIndex}`}
         style={p.isLast ? { paddingBottom: "10px" } : { paddingBottom: "40px" }}
       >
         <a href={p.url}>

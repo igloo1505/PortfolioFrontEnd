@@ -21,7 +21,7 @@ const SkillsSection = () => {
         <section id="skillsSection" className="skills" style={{ background: AppColors.skillsBodyColor}}>
         <div className="skills-container">
         <ul>
-        {skillsArray.map(s => (<SkillCard skill={s}/>))}
+        {skillsArray.map(s => (<SkillCard key={s.title} skill={s}/>))}
         </ul>
 
         </div>
