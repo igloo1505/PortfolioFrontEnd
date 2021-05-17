@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom'
 import Navbar from "./components/Navbar";
 import M from "materialize-css/dist/js/materialize.min.js";
 import ReactGA from "react-ga";
@@ -10,6 +9,7 @@ import "./css/Gallery.css";
 import ttiPolyfill from "tti-polyfill";
 import LandingPage from "./Pages/LandingPage";
 import ComponentGallery from "./Pages/ComponentGallery";
+import ResumeComponent from "./components/resume/ResumeComponent";
 import { gsap } from "gsap";
 import { EaselPlugin } from "gsap/EaselPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -18,12 +18,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { animateOnScroll } from "./animations/scrollTriggerFunctions";
 
 function App() {
-const [styleFromPath, setStyleFromPath] = useState({})
+  const [styleFromPath, setStyleFromPath] = useState({});
 
-// useEffect(() => {
-//   // const location = useLocation()
-//   // console.log("PATHNAME: ", location)
-// }, [])
+  // useEffect(() => {
+  //   // const location = useLocation()
+  //   // console.log("PATHNAME: ", location)
+  // }, [])
 
   function handlePerformance(list) {
     list.getEntries().forEach((entry) => {
@@ -94,18 +94,19 @@ const [styleFromPath, setStyleFromPath] = useState({})
   });
 
   return (
-    <Router>
-      <div className="App" style={styleFromPath}>
-        <Switch>
-          <Route path="/landing">
-            <LandingPage />
-          </Route>
-          <Route path="/">
-            <ComponentGallery setStyleFromPath={setStyleFromPath} />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <div className="App" style={styleFromPath}>
+      <Switch>
+        <Route path="/gallery">
+          <ComponentGallery setStyleFromPath={setStyleFromPath} />
+        </Route>
+        <Route path="/resume">
+          <ResumeComponent />
+        </Route>
+        <Route path="/">
+          <LandingPage />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 

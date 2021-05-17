@@ -4,7 +4,6 @@
   height: 100vh; }
 
 .panoramicImageSection {
-  height: calc(100vh - 111px);
   margin: 0;
   padding: 50px 50px 0 50px;
   background-color: #fff;
@@ -74,6 +73,11 @@
 .bodyHtmlHidden {
   overflow: hidden; }
 
+.cameraProductCardSection {
+  height: 100vh;
+  background-color: #01e37f;
+  display: flex; }
+
 .headerOverlay {
   height: 100%;
   width: 100%;
@@ -113,20 +117,15 @@ h3 {
 
 .product {
   display: grid;
-  grid-template-columns: 0.9fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: auto;
   padding: 2.5em 0;
   min-width: 600px;
   max-width: 900px;
-  background-color: white;
   border-radius: 5px; }
-
-.product__photo {
-  position: relative; }
 
 .photo-container {
   position: absolute;
-  left: -2.5em;
   display: grid;
   grid-template-rows: 1fr;
   width: 100%;
@@ -143,16 +142,26 @@ h3 {
   display: flex;
   justify-content: space-between;
   padding: 0.8em;
-  color: #fff; }
+  color: #fff;
+  position: absolute;
+  width: 100%; }
 
 .photo-main .controls i {
   cursor: pointer; }
 
+.photo-main .imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  margin-top: 0; }
+
 .photo-main img {
   position: absolute;
-  left: -3.5em;
   max-width: 110%;
-  filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3)); }
+  filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+  padding: 15px; }
 
 .photo-album {
   padding: 0.7em 1em;
@@ -165,8 +174,8 @@ h3 {
 
 .photo-album li {
   float: left;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   padding: 7px;
   border: 1px solid #a6a6a6;
   border-radius: 3px; }
@@ -190,9 +199,20 @@ h3 {
   transform: translate3d(0, 0px, 25px);
   transition: transform 0.3s; }
 
-/* ----- Informations Section ----- */
 .product__info {
-  padding: 0.8em 0; }
+  padding: 0.8em 1em;
+  position: relative;
+  display: block;
+  z-index: -5;
+  background: #fff;
+  border-radius: 10px; }
+
+.product__photo {
+  position: relative;
+  display: block;
+  transform: translateX(50%);
+  background: #fff;
+  border-radius: 10px; }
 
 .title h1 {
   margin-bottom: 0.1em;

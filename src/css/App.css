@@ -31,7 +31,8 @@ button:focus, button:active {
   color: #fff;
   font-size: 20px;
   letter-spacing: .3rem;
-  font-style: normal; }
+  font-style: normal;
+  z-index: 500; }
 
 .st0 {
   fill: #F9AB00; }
@@ -157,7 +158,7 @@ header nav ul {
   /* height: 100%;  */ }
 
 header nav ul li {
-  z-index: 50; }
+  z-index: 500; }
 
 header .headerOverlayLanding {
   z-index: 50;
@@ -373,7 +374,7 @@ section {
     color: #fff;
     font-size: 30px;
     font-style: normal;
-    z-index: 50; }
+    z-index: 500; }
   .logoFont .innerLogoText {
     border-bottom: 1px solid white; }
   .slideOutDiv {
